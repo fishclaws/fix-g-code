@@ -8,6 +8,7 @@ async function fix(filename: string) {
     const contents = fs.readFileSync(filename, 'utf8');
 
     let fixed = replaceAll(contents, 'P E N D O W N', 'PENDOWN');
+    fixed = replaceAll(fixed, 'PENUP', 'PENUP ');
     fixed = replaceAll(fixed, 'P E N U P', 'PEN_UP ');
     fixed = replaceAll(fixed, 'P R I N T S T A R T', 'PRINTSTART');
     fixed = replaceAll(fixed, 'P R I N T E N D', 'PRINTEND');
